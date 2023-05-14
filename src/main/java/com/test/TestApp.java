@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class TestApp implements CommandLineRunner {
     @Autowired
-    private JobService job;
+    private JobService jobService;
 
     public static void main(String[] args) {
         SpringApplication.run(TestApp.class, args);
@@ -17,6 +17,6 @@ public class TestApp implements CommandLineRunner {
 
     @Override
     public void run(String[] args) {
-        job.apply();
+        jobService.apply();
     }
 }
